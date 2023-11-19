@@ -1,9 +1,11 @@
 import start from './cli.js';
 
+
 const game = (gameRound, sentence) => {
   const name = start();
   console.log(sentence);
-  for (let i = 0; i < 3; i += 1) {
+  const repeatCount = 3;
+  for (let i = 0; i < repeatCount; i += 1) {
     const [answer, rightAnswer] = gameRound();
     if (answer === rightAnswer) {
       console.log('Correct!');
