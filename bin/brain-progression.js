@@ -12,17 +12,17 @@ const gameRound = () => {
   const step = randomNumber(1, 10);
   const spacePos = randomNumber(0, count);
   const progMass = [];
-  let rightAnswer;
+  let hiddenMember;
   for (let i = 0; i < count; i += 1) {
     if (i !== spacePos) {
       const item = `${firstNum + step * i}`;
       progMass.push(item);
     } else {
       progMass.push('..');
-      rightAnswer = `${firstNum + step * i}`;
+      hiddenMember = `${firstNum + step * i}`;
     }
   }
-
+  const rightAnswer = hiddenMember;
   const progStr = progMass.join(' ');
   console.log(`Question: ${progStr}`);
   const answer = readlineSync.question('Your answer: ');
