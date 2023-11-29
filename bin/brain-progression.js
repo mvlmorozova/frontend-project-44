@@ -8,7 +8,7 @@ console.log('brain-progression\n');
 
 const gameRound = () => {
   const count = randomNumber(5, 12);
-  const firstNum = randomNumber(-10, 25);
+  const firstNum = randomNumber(1, 25);
   const step = randomNumber(1, 10);
   const spacePos = randomNumber(0, count);
   const progMass = [];

@@ -33,7 +33,6 @@ const gameRound = () => {
   const rightAnswer = calculate(firstNumber, secondNumber);
   console.log(`Question: ${firstNumber} ${secondNumber}`);
   const answer = readlineSync.question('Your answer: ');
-
   return [answer, String(rightAnswer)];
 };
 
