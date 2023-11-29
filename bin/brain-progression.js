@@ -8,25 +8,24 @@ console.log('brain-progression\n');
 
 const gameRound = () => {
   const count = randomNumber(5, 12);
-  const firstNum = randomNumber(1, 25);
-  const step = randomNumber(1, 10);
-  const spacePos = randomNumber(0, count);
+  const first = randomNumber(1, 25);
+  const difference = randomNumber(1, 10);
+  const hiddenMemberIndex = randomNumber(0, count);
   const progMass = [];
   let hiddenMember;
   for (let i = 0; i < count; i += 1) {
-    if (i !== spacePos) {
-      const item = `${firstNum + step * i}`;
+    if (i !== hiddenMemberIndex) {
+      const item = String(first + difference * i);
       progMass.push(item);
     } else {
       progMass.push('..');
-      hiddenMember = `${firstNum + step * i}`;
+      hiddenMember = String(first + difference * i);
     }
   }
-  const rightAnswer = hiddenMember;
   const progStr = progMass.join(' ');
   console.log(`Question: ${progStr}`);
   const answer = readlineSync.question('Your answer: ');
-  return [answer, rightAnswer];
+  return [answer, hiddenMember];
 };
 
 game(gameRound, firstSent);
