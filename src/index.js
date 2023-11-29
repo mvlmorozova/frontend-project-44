@@ -6,7 +6,7 @@ const game = (gameRound, sentence) => {
   const repeatCount = 3;
   for (let i = 0; i < repeatCount; i += 1) {
     const [answer, rightAnswer] = gameRound();
-    if (parseInt(answer, 10) === rightAnswer) {
+    if (answer === rightAnswer) {
       console.log('Correct!');
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}"`);

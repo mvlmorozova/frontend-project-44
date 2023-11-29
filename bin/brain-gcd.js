@@ -3,6 +3,7 @@
 import readlineSync from 'readline-sync';
 import game, { randomNumber } from '../src/index.js';
 
+
 const firstSent = 'Find the greatest common divisor of given numbers.';
 console.log('brain-gcd\n');
 
@@ -29,10 +30,11 @@ const calculate = (a, b) => {
 const gameRound = () => {
   const firstNumber = randomNumber(0, 50);
   const secondNumber = randomNumber(0, 50);
-  const rightAnswer = calculate(firstNumber, secondNumber);
+  const num = calculate(firstNumber, secondNumber);
+  const rightAnswer = String(num);
   console.log(`Question: ${firstNumber} ${secondNumber}`);
   const answer = readlineSync.question('Your answer: ');
-  return [answer, rightAnswer]; 
+  return [answer, rightAnswer];
 };
 
 game(gameRound, firstSent);
