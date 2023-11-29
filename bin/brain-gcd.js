@@ -32,7 +32,7 @@ const gameRound = () => {
   const rightAnswer = calculate(firstNumber, secondNumber);
   console.log(`Question: ${firstNumber} ${secondNumber}`);
   const answer = readlineSync.question('Your answer: ');
-  return [parseInt(answer, 10), rightAnswer];
+  return [answer, rightAnswer]; 
 };
 
 game(gameRound, firstSent);

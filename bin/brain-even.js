@@ -7,7 +7,6 @@ console.log('brain-even\n');
 
 const firstSent = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-
 const gameRound = () => {
   const answers = [];
   const num = randomNumber(1, 50);

@@ -1,13 +1,12 @@
 import start from './cli.js';
 
-
 const game = (gameRound, sentence) => {
   const name = start();
   console.log(sentence);
   const repeatCount = 3;
   for (let i = 0; i < repeatCount; i += 1) {
     const [answer, rightAnswer] = gameRound();
-    if (answer === rightAnswer) {
+    if (parseInt(answer, 10) === rightAnswer) {
       console.log('Correct!');
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}"`);
