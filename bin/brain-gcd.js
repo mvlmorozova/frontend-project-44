@@ -24,17 +24,17 @@ const calculate = (a, b) => {
     max = min;
     min = rez;
   }
-  return 0;
+  return 1;
 };
 
 const gameRound = () => {
-  const firstNumber = randomNumber(0, 50);
-  const secondNumber = randomNumber(0, 50);
-  const num = calculate(firstNumber, secondNumber);
-  const rightAnswer = String(num);
+  const firstNumber = randomNumber(1, 50);
+  const secondNumber = randomNumber(1, 50);
+  const rightAnswer = calculate(firstNumber, secondNumber);
   console.log(`Question: ${firstNumber} ${secondNumber}`);
   const answer = readlineSync.question('Your answer: ');
-  return [answer, rightAnswer];
+
+  return [answer, String(rightAnswer)];
 };
 
 game(gameRound, firstSent);
