@@ -10,7 +10,7 @@ const gameRound = () => {
   const count = randomNumber(5, 12);
   const first = randomNumber(1, 25);
   const difference = randomNumber(1, 10);
-  const hiddenMemberIndex = randomNumber(0, count);
+  const hiddenMemberIndex = randomNumber(0, count - 1);
   const progMass = [];
   let hiddenMember;
   for (let i = 0; i < count; i += 1) {
